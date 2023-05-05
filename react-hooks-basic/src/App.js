@@ -9,6 +9,8 @@ import Pagination from './Components/Pagination';
 import queryString from 'query-string';
 import PostFiltersForm from './Components/PostFiltersForm';
 import Clock from './Components/Clock';
+import NewClock from './Components/NewClock';
+import MagicBox from './Components/MagicBox';
 
 function App() {
   const [todoList, setTodoList] = useState([
@@ -125,10 +127,15 @@ function App() {
       </div>
       <div>
         <h1>Dùng useEffect() qua ví dụ hiển thị giờ</h1>
-        {clockVisible && showClock && <Clock />}
         <button onClick={handleClockVisibility}>
         {clockVisible ? 'Ẩn đồng hồ' : 'Hiện đồng hồ'}
         </button>
+        {clockVisible && showClock && <Clock />}
+        <NewClock />
+      </div>
+      <div>
+        <h1>Dùng customhooks() qua ví dụ</h1>
+        <MagicBox />
       </div>
       <div>
         <h1>Dùng useState() qua ví dụ</h1>
