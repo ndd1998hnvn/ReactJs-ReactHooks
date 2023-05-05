@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import './ColorBox.scss'
 
 ColorBox.propTypes = {
@@ -26,8 +25,7 @@ function ColorBox() {
         <div className='color-box'
         style={{backgroundColor: color}}
         onClick={handleBoxClick}
-        >
-            ColorBox            
+        >          
         </div>
     );
 }
